@@ -1,6 +1,11 @@
 package com.example.converter_spring.models;
 
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 public class CurrencyRate {
     private Double eur;
     private Double usd;
@@ -13,19 +18,4 @@ public class CurrencyRate {
         this.usd = usd;
     }
 
-    public Double getEur() {
-        return eur;
-    }
-
-    public void setEur(Double eur) {
-        this.eur = eur;
-    }
-
-    public Double getUsd() {
-        return usd;
-    }
-
-    public void setUsd(Double usd) {
-        this.usd = usd;
-    }
 }

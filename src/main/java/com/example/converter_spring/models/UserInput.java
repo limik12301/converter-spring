@@ -1,5 +1,11 @@
 package com.example.converter_spring.models;
 
+import lombok.Getter;
+import lombok.Setter;
+
+
+@Setter
+@Getter
 public class UserInput {
     public String currencyCode;
     public Double value;
@@ -11,19 +17,4 @@ public class UserInput {
         this.value = value;
     }
 
-    public String getCurrencyCode() {
-        return currencyCode;
-    }
-
-    public void setCurrencyCode(String currencyCode) {
-        this.currencyCode = currencyCode;
-    }
-
-    public Double getValue() {
-        return value;
-    }
-
-    public void setValue(Double value) {
-        this.value = value;
-    }
 }

@@ -6,7 +6,7 @@ import com.example.converter_spring.models.CurrencyRate;
 import com.example.converter_spring.services.CurrencyRateService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.io.FileReader;
@@ -14,13 +14,9 @@ import java.io.IOException;
 import java.util.Scanner;
 
 @Service
+@RequiredArgsConstructor
 public class CurrencyRateServiceImpl implements CurrencyRateService {
     private final ObjectMapper objectMapper;
-
-    @Autowired
-    public CurrencyRateServiceImpl(ObjectMapper objectMapper) {
-        this.objectMapper = objectMapper;
-    }
 
     @Override
     public CurrencyRate readCurrencyRate(String url) {

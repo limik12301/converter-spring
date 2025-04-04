@@ -6,18 +6,13 @@ import com.example.converter_spring.models.CurrencyRate;
 import com.example.converter_spring.models.UserInput;
 import com.example.converter_spring.services.ConvertCurrencyService;
 import com.example.converter_spring.services.CurrencyRateService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class ConvertCurrencyServiceImpl implements ConvertCurrencyService {
     private final CurrencyRateService currencyRateService;
-
-    @Autowired
-    public ConvertCurrencyServiceImpl(CurrencyRateService currencyRateService) {
-        this.currencyRateService = currencyRateService;
-
-    }
 
     @Override
     public Double convertCurrencyRub(UserInput userInput){
